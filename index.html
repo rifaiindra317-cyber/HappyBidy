@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Love Message</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Courier New', Courier, monospace;
+      color: #e91e63;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #message-box {
+      background-color: #fff;
+      border: 2px solid #e91e63;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 600px;
+      font-size: 1.5em;
+      white-space: pre-wrap;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      color: #e91e63;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #e91e63;
+      animation: blink 0.8s infinite;
+      margin-left: 3px;
+      height: 1em;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="message-box">
+    <span id="text"></span><span class="cursor"></span>
+  </div>
+
+  <script>
+    const message = `Haii kak, hari ini ulang tahun yahh?
+
+Happy birthday.
+Udah 19 tahun nih sekarangg mah
+Makin tua aja nihh teh wkwkw
+Tapi gapapa lah, umur boleh tua jiwa mah harus tetap muda. Yagasii
+Disini aku cuman mau bilang..
+
+Kapan nih mood buat bikin kue yang lucu ituu
+Jadi penasaran deh akuu wkwkw
+Yah yang terpenting dari semuanya, semoga teteh diberikan kelancaran di dunia perkuliahannya.
+Di tahun ini aku harap jadi tahun yang lebih baik daripada tahun sebelumnya.
+Aku harap di setiap hari teteh jadi bait-bait cerita yang penuh warna indah, dan bermakna.
+Apapun tujuan teteh dimudahkan agar bisa tercapai.
+Wish you all the best deh pokoknya mah
+Yang penting mah teteh tetep menjadi diri teteh sendiri
+Ingat kata kata S 001 Pen "Jadilah dirimu sebaik dirimu sendiri" (anjay)
+
+Sehat sehat orang baik.
+Ohh iyaa, mau dong di ajarin bahasa isyarat nanti :D
+
+    let i = 0;
+    function typeText() {
+      if (i < message.length) {
+        document.getElementById("text").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeText, 50); // kecepatan ketik
+      }
+    }
+
+    window.onload = typeText;h
+  </script>
+</body>
+</html>
